@@ -123,6 +123,7 @@
     [writeStream write:dstBytes maxLength:dstLength];
     
 done:
+    CCCryptorRelease(cryptor);
     [readStream close];
     [writeStream close];
 }
